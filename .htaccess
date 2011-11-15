@@ -1,0 +1,43 @@
+RewriteEngine on
+#
+## Internally rewrite extensionless file requests to .html files ##
+#
+
+#RewriteCond %{HTTP_HOST} ^mgmt.brokerprospects.com$ [NC]
+#RewriteRule ^(.*) /mgmt/$1 [L,QSA]
+
+RewriteCond %{HTTP_HOST} sellerwatch [NC]
+RewriteCond %{REQUEST_URI} !(^/sellerwatch/) [NC]
+RewriteRule ^(.*)$ /sellerwatch/$1
+
+RewriteCond %{HTTP_HOST} ^bemyrealestateagent\.com$ [NC]
+RewriteRule ^(.*)$ http://www.bemyrealestateagent.com/$1 [R=301,L,QSA]
+
+RewriteCond %{HTTP_HOST} ^brokerprospects\.com$ [NC]
+RewriteRule ^$ http://www.bemyrealestateagent.com/for_agents [R=301,L,QSA]
+
+RewriteCond %{HTTP_HOST} ^brokerprospects\.com$ [NC]
+RewriteRule ^(.+)$ http://www.bemyrealestateagent.com/$1 [R=301,L,QSA]
+
+RewriteCond %{HTTP_HOST} ^www\.brokerprospects\.com$ [NC]
+RewriteRule ^$ http://www.bemyrealestateagent.com/for_agents [R=301,L,QSA]
+
+RewriteCond %{HTTP_HOST} ^www\.brokerprospects\.com$ [NC]
+RewriteRule ^(.+)$ http://www.bemyrealestateagent.com/$1 [R=301,L,QSA]
+
+RewriteRule ^prospectS([0-9]{8})([0-9]{8}) /contact_seller.php?sid=$1&aid=$2 [L,QSA]
+
+RewriteRule ^prospectB([0-9]{8})([0-9]{8}) /contact_buyer.php?bid=$1&aid=$2 [L,QSA]
+
+RewriteRule ^opt_out([0-9]{8}) /opt_out.php?id=$1 [L,QSA]
+
+RewriteRule ^linkedin /for_agents.php?source=linkedin [L,QSA]
+
+# If the requested URI does not contain a period in the final path-part
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+# and if it does not exist as a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# and if it does not exist as a file
+RewriteCond %{REQUEST_FILENAME} !-f
+# then add .html to get the actual filename
+RewriteRule ^(.*)$ /$1.php [L,QSA]
