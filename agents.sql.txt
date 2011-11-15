@@ -1,0 +1,43 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.11.3
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 14, 2011 at 10:48 PM
+-- Server version: 5.0.77
+-- PHP Version: 5.1.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `mktplace`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agents`
+--
+
+CREATE TABLE IF NOT EXISTS `agents` (
+  `id` int(11) NOT NULL auto_increment,
+  `email` varchar(50) NOT NULL,
+  `active` tinyint(4) NOT NULL default '1',
+  `website` varchar(200) default NULL,
+  `phone` varchar(15) default NULL,
+  `experience` varchar(3000) default NULL,
+  `strategy` varchar(3000) default NULL,
+  `title` varchar(4) NOT NULL,
+  `l_name` varchar(30) NOT NULL,
+  `f_name` varchar(30) default NULL,
+  `rate` decimal(3,2) default NULL,
+  `bounce_count` tinyint(4) default '0',
+  `opted_out` tinyint(4) NOT NULL default '0',
+  `zip` varchar(5) default NULL,
+  `source` varchar(50) default NULL,
+  `address` varchar(100) default NULL,
+  `address2` varchar(50) default NULL,
+  `datetime_entered` timestamp NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`),
+  KEY `zip` (`zip`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50369 ;

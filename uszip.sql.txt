@@ -1,0 +1,36 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.11.3
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 14, 2011 at 10:52 PM
+-- Server version: 5.0.77
+-- PHP Version: 5.1.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `mktplace`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uszip`
+--
+
+CREATE TABLE IF NOT EXISTS `uszip` (
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `state` char(2) default NULL,
+  `zip` varchar(5) default NULL,
+  `city` varchar(100) default NULL,
+  `state_name` varchar(100) default NULL,
+  `area_code` int(11) default '0',
+  `latitude` decimal(10,6) default '0.000000',
+  `longtitude` decimal(10,6) default '0.000000',
+  `gmt` int(11) default '0',
+  PRIMARY KEY  (`id`),
+  KEY `state` (`state`),
+  KEY `zip` (`zip`),
+  KEY `city` (`city`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=80356 ;

@@ -1,0 +1,199 @@
+@CHARSET "ISO-8859-1";
+
+
+body {
+	text-align:center;	
+	background-color:#415B62;	
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.outer_wrapper {
+	width:960px;
+	margin:auto;	
+	/*background-color:#E6EBEB;*/
+	border:15px solid #E6EBEB;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;	
+}
+
+.inner_wrapper {
+	/*width:930px;*/
+	margin:auto;
+	background-color:white;
+	font-size:12px;
+	color:dimgray;	
+	font-weight:strong;
+	border:1px solid lightgray;	
+}
+
+.spacer {
+	height:15px;
+	font-size:0px;
+}
+
+.main_heading {
+	width:960px;
+	text-align:left;
+	color:white;
+	font-size:46px;
+	margin:auto;	
+}
+
+.subtitle {
+	font-size:23px;
+	font-style:italic;
+}
+
+.heading_spacer {
+	height:25px;
+	font-size:0px;
+}
+
+.row {
+	clear:both;
+	text-align:left;
+	height:23px;
+}
+
+.col1 {
+	float:left;
+	width:175px;	
+}
+
+.col_1_2 {
+	float:left;
+	width:500px;	
+}
+
+.col2 {
+	float:left;
+	width:325px;	
+}
+
+.col3 {
+	float:left;
+	width:250px;
+	color:red;	
+}
+
+.table {
+	/*margin:auto;*/
+	width:750px;
+	margin-left:105px;
+}
+
+/*
+.button {
+	background-color:#B9B9B9;
+	border:none;
+	color:black;
+	cursor:pointer;	
+}
+*/
+
+.button_link {
+	background-color:#E6EBEB;
+	border:1px solid lightgray;
+	color:#0A7A98;
+	cursor:pointer;	
+	font-size:36px;
+	margin-left:auto;
+	margin-right:auto;	
+	text-decoration:none;
+	display:block;
+	width:300px;
+	
+	
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;	
+}
+
+.bigger_text {
+	font-size:16px;
+}
+
+.copy_block {
+	font-size:16px;
+	width:960px;
+	text-align:left;
+	color:white;	
+	margin:auto;
+}
+
+.emp_span {
+	text-decoration:underline;
+}
+
+.footer {
+	font-size:16px;
+	text-align:center;
+	color:white;
+}
+
+.big_thanks {
+	font-size:56px;
+}
+
+.side_note {
+	font-style:italic;
+	font-size:18px;
+}
+
+.reg_info {
+	font-size:18px;
+}
+
+.agent_link_row {
+	margin-top:20px;
+}
+
+.agent_link_button {	
+	font-size:18px;
+	text-align:center;
+	width:200px;
+}
+
+.inp_header {
+	font-weight:bold;
+}
+
+.mailto_link {	
+	cursor:pointer;
+	color:white;
+}
+
+/*
+#doform {
+	width:80px;
+	margin-left:85px;	
+}
+*/
+
+.conf_note {
+	color:dimgray;
+}
+
+.more_copy {
+	font-size:18px;
+	text-align:justify;
+	width:700px;
+	margin:auto;
+	font-style:italic;
+}
+
+.regular {
+	text-align:justify;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.emphatic {
+	font-size:20px;
+	font-style:normal;
+	font-weight:bold;
+	margin-top:10px;
+	margin-bottom:10px;
+}
